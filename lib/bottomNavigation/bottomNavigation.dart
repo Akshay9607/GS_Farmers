@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 void main() {
   runApp(
       MaterialApp(
@@ -19,11 +20,16 @@ class BottomNavigation extends StatelessWidget {
         children: [
           IconButton(
             icon: Icon(Icons.home_outlined),
-            onPressed: (){},
+            onPressed: (){
+              // Navigator.pushNamed(context, "/");
+              GoRouter.of(context).go("/");
+            },
           ),
           IconButton(
             icon: Icon(Icons.book_outlined),
-            onPressed: (){},
+            onPressed: (){
+              GoRouter.of(context).go("/education");
+            },
           ),
           IconButton(
             icon: Icon(Icons.store_mall_directory_outlined),

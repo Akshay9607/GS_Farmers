@@ -93,10 +93,6 @@ class EducationCategory extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
-        child: BottomNavigation(),
-      ),
     );
   }
 }

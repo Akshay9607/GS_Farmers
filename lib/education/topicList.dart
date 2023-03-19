@@ -17,10 +17,6 @@ class TopicList extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
         child: Text("Topic List"),
       ),
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
-        child: BottomNavigation(),
-      ),
     );
   }
 }
