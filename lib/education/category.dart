@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
-
+import 'package:farmhelp/bottomNavigation/bottomNavigation.dart';
 
 void main() => runApp(MaterialApp(
   home : EducationCategory(),
@@ -95,18 +95,7 @@ class EducationCategory extends StatelessWidget {
       ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        child: Container(
-            height: 50.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Icon(Icons.home_outlined),
-              Icon(Icons.book_outlined),
-              Icon(Icons.store_mall_directory_outlined),
-              Icon(Icons.image_search ),
-            ],
-          ),
-        ),
+        child: BottomNavigation(),
       ),
     );
   }
