@@ -1,11 +1,12 @@
 import 'package:farmhelp/education/category.dart';
+import 'package:farmhelp/education/topicMain.dart';
 import 'package:flutter/material.dart';
 import 'package:farmhelp/education/topicList.dart';
 import 'package:farmhelp/bottomNavigation/bottomNavigation.dart';
 import 'package:go_router/go_router.dart';
 
 // GoRouter configuration
-final _router = GoRouter(initialLocation: '/topiclist', routes: [
+final _router = GoRouter(initialLocation: '/', routes: [
   ShellRoute(
     builder: (BuildContext context, GoRouterState state, Widget child) {
       return Scaffold(
@@ -25,6 +26,10 @@ final _router = GoRouter(initialLocation: '/topiclist', routes: [
       GoRoute(
         path: '/topiclist',
         builder: (context, state) => TopicList(),
+      ),
+      GoRoute(
+        path: '/topicmain',
+        builder: (context, state) => TopicMain(),
       ),
     ],
   )
