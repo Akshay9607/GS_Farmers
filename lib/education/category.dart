@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:farmhelp/bottomNavigation/bottomNavigation.dart';
+import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MaterialApp(
   home : EducationCategory(),
@@ -31,7 +33,7 @@ class EducationCategory extends StatelessWidget {
                 children: [
                   Text(
                     "Educate,",
-                    style: TextStyle(
+                    style: GoogleFonts.lora(
                       color: Colors.white, // Sets the color to blue
                       fontSize: 25.0, // Sets the font size to 16.0 pixels
                       fontWeight: FontWeight.bold, // Sets the font weight to bold
@@ -40,7 +42,7 @@ class EducationCategory extends StatelessWidget {
                   SizedBox(height: 4.0),
                   Text(
                     "yourself here",
-                    style: TextStyle(
+                    style: GoogleFonts.lora(
                       color: Colors.white, // Sets the color to blue
                       fontSize: 20.0, // Sets the font size to 16.0 pixels
                       fontWeight: FontWeight.w100, // Sets the font weight to bold
@@ -48,12 +50,12 @@ class EducationCategory extends StatelessWidget {
                   ),
                   SizedBox(height: 30.0),
                   TextField(
-                    style: TextStyle(
+                    style: GoogleFonts.lora(
                       color: Color.fromRGBO(183, 183, 183, 1), // Sets the text color to black
                     ),
                     decoration: InputDecoration(
                       hintText: 'Enter your name',
-                      hintStyle: TextStyle(
+                      hintStyle: GoogleFonts.lora(
                         color: Color.fromRGBO(197, 197, 199, 1), // Sets the hint text color to grey
                       ),
                       filled: true, // Fills the background with a color
@@ -78,7 +80,7 @@ class EducationCategory extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: Text(
                 "Education categories",
-                style: TextStyle(
+                style: GoogleFonts.lora(
                   color: Color.fromRGBO(29, 101, 4, 1), // Sets the color to blue
                   fontSize: 25.0, // Sets the font size to 16.0 pixels
                   fontWeight: FontWeight.bold, // Sets the font weight to bold
@@ -136,30 +138,35 @@ class _GridBState extends State<GridB> {
       ),
       itemCount: gridMap.length,
       itemBuilder: (_, index){
-      return Container(
-        padding: EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12.0),
-          color: Colors.white
-        ),
-        child: Column(
-          children: [
-            Image(
-              image: AssetImage(gridMap.elementAt(index)['imageSrc']),
-              width: 150.0,
-              height: 110.0,
+      return  InkWell(
+        onTap: (){
+          return GoRouter.of(context).go("/topiclist");
+        },
+        child: Container(
+            padding: EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12.0),
+              color: Colors.white
             ),
-            Text(
-              gridMap.elementAt(index)['title'],
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Color.fromRGBO(29, 101, 4, 1), // Sets the color to blue
-                  fontSize: 15.0, // Sets the font size to 16.0 pixels
-                  fontWeight: FontWeight.bold, // Sets the font weight to bold
+            child: Column(
+              children: [
+                Image(
+                  image: AssetImage(gridMap.elementAt(index)['imageSrc']),
+                  width: 150.0,
+                  height: 110.0,
                 ),
-            )
-          ],
-        ),
+                Text(
+                  gridMap.elementAt(index)['title'],
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.lora(
+                      color: Color.fromRGBO(29, 101, 4, 1), // Sets the color to blue
+                      fontSize: 15.0, // Sets the font size to 16.0 pixels
+                      fontWeight: FontWeight.bold, // Sets the font weight to bold
+                    ),
+                )
+              ],
+            ),
+          ),
       );
     });
   }
