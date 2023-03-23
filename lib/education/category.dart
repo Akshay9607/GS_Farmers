@@ -88,6 +88,7 @@ class EducationCategory extends StatelessWidget {
               ),
             ),
             SizedBox(height: 24.0),
+            // Category card List
             Padding(
               padding: const EdgeInsets.all(24.0),
               child: GridB(),

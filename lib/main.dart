@@ -1,5 +1,6 @@
 import 'package:farmhelp/education/category.dart';
 import 'package:farmhelp/education/topicMain.dart';
+import 'package:farmhelp/store/store.dart';
 import 'package:flutter/material.dart';
 import 'package:farmhelp/education/topicList.dart';
 import 'package:farmhelp/bottomNavigation/bottomNavigation.dart';
@@ -30,6 +31,10 @@ final _router = GoRouter(initialLocation: '/', routes: [
       GoRoute(
         path: '/topicmain',
         builder: (context, state) => TopicMain(),
+      ),
+      GoRoute(
+        path: '/store',
+        builder: (context, state) => Store(),
       ),
     ],
   )
