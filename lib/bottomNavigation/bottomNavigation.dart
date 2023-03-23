@@ -33,7 +33,9 @@ class BottomNavigation extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(Icons.store_mall_directory_outlined),
-            onPressed: (){},
+            onPressed: (){
+              GoRouter.of(context).go("/store");
+            },
           ),
           IconButton(
             icon: Icon(Icons.image_search),
