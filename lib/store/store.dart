@@ -26,7 +26,6 @@ class _StoreState extends State<Store> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(212, 255, 208, 1),
       body: Container(
-
         child: SingleChildScrollView(
           child: Column(
             children: [
