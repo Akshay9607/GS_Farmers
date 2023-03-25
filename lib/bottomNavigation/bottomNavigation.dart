@@ -39,7 +39,9 @@ class BottomNavigation extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(Icons.image_search),
-            onPressed: (){},
+            onPressed: (){
+              GoRouter.of(context).go("/recommend");
+            },
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:farmhelp/education/category.dart';
 import 'package:farmhelp/education/topicMain.dart';
+import 'package:farmhelp/personalization/crop_recommend.dart';
 import 'package:farmhelp/store/store.dart';
 import 'package:flutter/material.dart';
 import 'package:farmhelp/education/topicList.dart';
@@ -29,8 +30,8 @@ final _router = GoRouter(initialLocation: '/', routes: [
         builder: (context, state) => TopicList(),
       ),
       GoRoute(
-        path: '/topicmain',
-        builder: (context, state) => TopicMain(),
+        path: '/recommend',
+        builder: (context, state) => Crop_Recommend(),
       ),
       GoRoute(
         path: '/store',
