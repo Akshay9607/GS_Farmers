@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:tflite/tflite.dart';
@@ -230,7 +231,9 @@ class _Crop_RecommendState extends State<Crop_Recommend> {
                                   ),
                                   SizedBox(height: 30,),
                                   ElevatedButton(
-                                      onPressed: (){},
+                                      onPressed: (){
+                                        return GoRouter.of(context).go("/yieldPredict");
+                                      },
                                       child: Text(
                                         "Predict Yield",
                                         style: TextStyle(

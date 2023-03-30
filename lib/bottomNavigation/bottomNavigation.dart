@@ -28,7 +28,7 @@ class BottomNavigation extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.book_outlined),
             onPressed: (){
-              GoRouter.of(context).go("/education");
+              GoRouter.of(context).go("/sell");
             },
           ),
           IconButton(

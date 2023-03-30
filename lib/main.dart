@@ -1,6 +1,8 @@
 import 'package:farmhelp/education/category.dart';
 import 'package:farmhelp/education/topicMain.dart';
 import 'package:farmhelp/personalization/crop_recommend.dart';
+import 'package:farmhelp/personalization/prediction.dart';
+import 'package:farmhelp/sell/sell2.dart';
 import 'package:farmhelp/store/store.dart';
 import 'package:flutter/material.dart';
 import 'package:farmhelp/education/topicList.dart';
@@ -18,11 +20,11 @@ final _router = GoRouter(initialLocation: '/', routes: [
     },
     routes: [
       GoRoute(
-        path: '/',
-        builder: (context, state) => Home(),
+        path: '/sell',
+        builder: (context, state) => SellPage(),
       ),
       GoRoute(
-        path: '/education',
+        path: '/',
         builder: (context, state) => EducationCategory(),
       ),
       GoRoute(
@@ -30,8 +32,16 @@ final _router = GoRouter(initialLocation: '/', routes: [
         builder: (context, state) => TopicList(),
       ),
       GoRoute(
+        path: '/topicmain',
+        builder: (context, state) => TopicMain(),
+      ),
+      GoRoute(
         path: '/recommend',
         builder: (context, state) => Crop_Recommend(),
+      ),
+      GoRoute(
+        path: '/yieldPredict',
+        builder: (context, state) => Prediction(),
       ),
       GoRoute(
         path: '/store',
