@@ -42,8 +42,8 @@ for getting ip address open cmd and type ipconfig and copy the ipv4 address prov
 If you encountered Build Failed then in you have to make some changes in external flutter plugin tflite.
 Inside flutter flugins go to tflite-1.1.2/android/build.gradle 
 and make changes as mentioned below : 
-
- ``` dependencies {
+ ```
+ dependencies {
         implementation 'org.tensorflow:tensorflow-lite:+'
         implementation 'org.tensorflow:tensorflow-lite-gpu:+'
     } 
@@ -53,4 +53,5 @@ at places of compile you have to write implementation.
 After this again use command : flutter pub get
 
 and finally : flutter run
+
 Congrats! Project Build Successfully.
