@@ -31,7 +31,9 @@ then make .env file inside FarmBuddy-Backend directory and
 update mongoURI and
 port = 3000
 then you can run backend using command : npm start
+
 If you are running on physical device make sure your computer and mobile are connected to same network for successful api calls and data fetching.
+
 also as api's are not hosted so in code need to replace all ip addresses with your computer's ip address
 for getting ip address open cmd and type ipconfig and copy the ipv4 address provided.
 
@@ -44,8 +46,8 @@ and make changes as mentioned below :
  dependencies {
         implementation 'org.tensorflow:tensorflow-lite:+'
         implementation 'org.tensorflow:tensorflow-lite-gpu:+'
-
     }
+    
 at places of compile you have to write implementation.
 
 After this again use command : flutter pub get
