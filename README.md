@@ -46,8 +46,8 @@ and make changes as mentioned below :
  ``` dependencies {
         implementation 'org.tensorflow:tensorflow-lite:+'
         implementation 'org.tensorflow:tensorflow-lite-gpu:+'
-    } ``` 
-    
+    } 
+ ```    
 at places of compile you have to write implementation.
 
 After this again use command : flutter pub get
